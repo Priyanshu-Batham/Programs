@@ -4,29 +4,44 @@
 
 char spaceReplace(char str[50], char c)
 {
+
+    char s[50];
     printf("Previous string was %s", str);
-    int i=0;
-    while (i++)
+    int i;
+    for (i=0; i=49; i++)
     {
+        
         if (str[i]==' ')
         {
-            str[i]=c;
+            //printf("%c", str[i]);
+            s[i]=c;
         }
         else if (str[i]=='\0')
         {
             break;
         }
+        else
+        {
+            s[i]=str[i];
+        }
     }
-    printf("The new string is %s" ,str);
+    printf("The new string is %s" ,s);
     return 0;
 }
 
 int main()
 {
     char st[50], ch;
+    printf("What character do you want to replace spaces with: ");
+    //scanf("%c", &ch);
+    ch=getchar();
+    fflush(stdin);
     printf("Enter a string: ");
-    scanf("%s", &st);
-    printf("What character do you want to replace spaces with: \n");
-    scanf("%c", &ch);
+    //scanf("%s", &st);
+    gets(st);
+    printf("Entering %c into string:", ch);
+
     spaceReplace(st, ch);
+
+    return 0;
 }
