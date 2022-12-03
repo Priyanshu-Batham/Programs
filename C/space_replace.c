@@ -12,7 +12,7 @@ char spaceReplace(char str[50], char c)
         {
             str[i]=c;
         }
-        else if (str[i]==NULL)
+        else if (str[i]=='\0')
         {
             break;
         }
