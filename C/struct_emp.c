@@ -27,6 +27,7 @@ int empDetails()
 
 int main()
 {
+    system("cls");
     /*int num;
     printf("Enter the number of employees:");
     scanf("%d", &num);*/
