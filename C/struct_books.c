@@ -14,7 +14,7 @@ struct struct_books{
 int bookDetails(int n)
 {
     int i;
-    struct struct_books books[n];
+    struct struct_books books[10];
     for (i=0; i<=n-1; i++)
     {
         printf("Enter the ISBN: ");
@@ -27,6 +27,17 @@ int bookDetails(int n)
         scanf("%s", &books[i].publisher);
         printf("Enter the price of book");
         scanf("%f", &books[i].price);
+        printf("\n");
+    }
+
+    for(i=0;i<n;i++){
+        printf("details of %d book\n",i+1);
+        printf("ISBN:%d\n",books[i].isbn);
+        printf("Book name: %s\n",books[i].book_name);
+        printf("Author name:%s\n",books[i].author_name);
+        printf("Publisher name:%s\n",books[i].publisher);
+        printf("Price of book:%f\n",books[i].price);      
+        printf("\n");
     }
     //printf("")
     //printf("Choose an option:")
@@ -40,4 +51,5 @@ int main(void)
     printf("Enter the number of books to store details of:");
     scanf("%d", &num);
     bookDetails(num);
+    return 0;
 }
